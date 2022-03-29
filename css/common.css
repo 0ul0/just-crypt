@@ -1,4 +1,4 @@
-
+@media (min-height: 720px) {
 *{	
 	font-family: 'Raleway', sans-serif;
 }
@@ -182,4 +182,4 @@ ul li.active::before{
 	font-size: 13px;
 	margin-bottom: 10px;
 }
-
+}
