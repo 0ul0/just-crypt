@@ -1,10 +1,8 @@
-.media {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.media > * {
-    flex: 1 1 250px;
+
+
+
+
 }	
 
 	font-family: 'Raleway', sans-serif;
