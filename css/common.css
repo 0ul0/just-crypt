@@ -1,3 +1,7 @@
+@media (max-width:768px) {
+	
+
+	
 *{
 	font-family: 'Raleway', sans-serif;
 }
@@ -5,6 +9,7 @@ body{
 	background-color: #000000;
 	color: #ddd;
 }
+
 div{
 	box-sizing: border-box;
 }
