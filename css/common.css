@@ -1,16 +1,14 @@
-@media (min-width: 600px) and (max-width: 800px) {
-  body {
-    width: 100%;
-  }
-}
 
 *{	
 	font-family: 'Raleway', sans-serif;
 }
-
-body{
-	background-color: #000000;
-	color: #ddd;
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+    background-color: #000000;
+    color: #ddd;
 }
 
 div{
