@@ -95,10 +95,9 @@ $(function(){
 			case "":
 				setTitle();
 				maker.addH2("", "", 'Добро пожаловать в just-crypt!');
-				maker.addP("", "", 'Please select cipher from the list on the left.');
+				maker.addP("", "", 'Выберите действие в боковом меню слева');
 				
-				maker.addP("", "", 'This website optimized for google chrome.');
-				maker.addP("", "", 'If you want, you can contact me by: <a href="mailto:plzdonotsay@gmail.com">plzdonotsay@gmail.com</a>');
+				maker.addP("", "", 'Этот вебсайт оптимизирован для ПК версии');
 				break;
 
 			case "encode":
@@ -415,34 +414,6 @@ $(function(){
 						});
 						break;
 
-					case "keyword":
-						setTitle("Keyword Cipher");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Keyword");
-
-						maker.addH2("work-type", "", "Keyword Cipher");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addTextarea("key-text", "", "Key", false, false, "", true);
-						$("#key-text").before('<code id="key-exam">ABCDEFGHIJKLMNOPQRSTUVWXYZ</code>');
-						maker.addButton("encipher-btn", "", "Encipher");
-						maker.addButton("decipher-btn", "", "Decipher");
-						maker.addButton("", "swap-btn", "Swap");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
-						$("html,body").scroll();
-
-						$("#encipher-btn").click(function(){
-							$("#after-text").edit(
-								keyword.encipher($("#before-text").val(), $("#key-text").val())
-							);
-						});
-						$("#decipher-btn").click(function(){
-							$("#after-text").edit(
-								keyword.decipher($("#before-text").val(), $("#key-text").val())
-							);
-						});
-						$("#key-text").on("input", function(){
-							$("#key-exam").html(keyword.getKey($(this).val()));
-						});
-						break;
 
 					case "vigenere":
 						setTitle("Vigenere Cipher");
