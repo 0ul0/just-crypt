@@ -104,7 +104,7 @@ $(function(){
 		switch(hashes[1]){
 			case "":
 				setTitle();
-				maker.addH2("", "", 'Welcome to just-crypt!');
+				maker.addH2("", "", 'Добро пожаловать в just-crypt!');
 				maker.addP("", "", 'Please select cipher from the list on the left.');
 				maker.addHtml('<img src="./img/bg.png" style="width: 470px; height: 369px;">');
 				maker.addP("", "", 'This website optimized for google chrome.');
