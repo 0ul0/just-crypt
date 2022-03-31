@@ -101,75 +101,8 @@ $(function(){
 				break;
 
 
-			case "cipher":
-				maker.addPath('./#!/'+hashes[1], "Cipher");
-
-				// start cipher
-				switch(hashes[2]){
-					case "", undefined:
-						$("#category-cipher").scroll();
-						break;
-
-					case "caesar":
-						setTitle("Caesar Cipher");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Caesar");
-
-						maker.addH2("work-type", "", "Caesar Cipher");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addTextarea("key-text", "", "Key", false, false, "3", true);
-						maker.addButton("encipher-btn", "", "Encipher");
-						maker.addButton("decipher-btn", "", "Decipher");
-						maker.addButton("", "swap-btn", "Swap");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
-						$("html,body").scroll();
-
-						$("#encipher-btn").click(function(){
-							$("#after-text").edit(
-								caesar.encipher($("#before-text").val(), $("#key-text").val().toInt())
-							);
-						});
-						$("#decipher-btn").click(function(){
-							$("#after-text").edit(
-								caesar.decipher($("#before-text").val(), $("#key-text").val().toInt())
-							);
-						});
-						break;
-
-
-					case "vigenere":
-						setTitle("Vigenere Cipher");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Vigenere");
-
-						maker.addH2("work-type", "", "Vigenere Cipher");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addTextarea("key-text", "", "Key", false, false, "", true);
-						maker.addButton("encipher-btn", "", "Encipher");
-						maker.addButton("decipher-btn", "", "Decipher");
-						maker.addButton("", "swap-btn", "Swap");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
-						$("html,body").scroll();
-
-						$("#encipher-btn").click(function(){
-							$("#after-text").edit(
-								vigenere.encipher($("#before-text").val(), $("#key-text").val())
-							);
-						});
-						$("#decipher-btn").click(function(){
-							$("#after-text").edit(
-								vigenere.decipher($("#before-text").val(), $("#key-text").val())
-							);
-						});
-						break;
-
-					default:
-						is_not_found = true;
-						break;
-				}
-				// end cipher
-				break;
-
 			case "encrypt":
-				maker.addPath('./#!/'+hashes[1], "Encrypt");
+				maker.addPath('./#!/'+hashes[1], "Выберите алгоритм");
 
 				// start encrypt
 				switch(hashes[2]){
@@ -181,13 +114,13 @@ $(function(){
 						setTitle("AES Encrypt");
 						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "AES");
 
-						maker.addH2("work-type", "", "AES Encrypt");
+						maker.addH2("work-type", "", "Алгоритм AES");
 						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addTextarea("key-text", "", "Key", false, false, "", true);
-						maker.addButton("encrypt-btn", "", "Encrypt");
-						maker.addButton("decrypt-btn", "", "Decrypt");
-						maker.addButton("", "swap-btn", "Swap");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
+						maker.addTextarea("key-text", "", "Ключ", false, false, "", true);
+						maker.addButton("encrypt-btn", "", "Зашифровать");
+						maker.addButton("decrypt-btn", "", "Расшифровать");
+						maker.addButton("", "swap-btn", "Поменять местами");
+						maker.addTextarea("after-text", "", "Результат", "12", false, "", true);
 						$("html,body").scroll();
 
 						$("#encrypt-btn").click(function(){
@@ -210,11 +143,11 @@ $(function(){
 
 						maker.addH2("work-type", "", "RC4 Encrypt");
 						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addTextarea("key-text", "", "Key", false, false, "", true);
-						maker.addButton("encrypt-btn", "", "Encrypt");
-						maker.addButton("decrypt-btn", "", "Decrypt");
-						maker.addButton("", "swap-btn", "Swap");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
+						maker.addTextarea("key-text", "", "Ключ", false, false, "", true);
+						maker.addButton("encrypt-btn", "", "Зашифровать");
+						maker.addButton("decrypt-btn", "", "Расшифровать");
+						maker.addButton("", "swap-btn", "Поменять местами");
+						maker.addTextarea("after-text", "", "Результат", "12", false, "", true);
 						$("html,body").scroll();
 
 						$("#encrypt-btn").click(function(){
@@ -237,11 +170,11 @@ $(function(){
 
 						maker.addH2("work-type", "", "DES Encrypt");
 						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addTextarea("key-text", "", "Key", false, false, "", true);
-						maker.addButton("encrypt-btn", "", "Encrypt");
-						maker.addButton("decrypt-btn", "", "Decrypt");
-						maker.addButton("", "swap-btn", "Swap");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
+						maker.addTextarea("key-text", "", "Ключ", false, false, "", true);
+						maker.addButton("encrypt-btn", "", "Зашифровать");
+						maker.addButton("decrypt-btn", "", "Расшифровать");
+						maker.addButton("", "swap-btn", "Поменять местами");
+						maker.addTextarea("after-text", "", "Результат", "12", false, "", true);
 						$("html,body").scroll();
 
 						$("#encrypt-btn").click(function(){
@@ -264,11 +197,11 @@ $(function(){
 
 						maker.addH2("work-type", "", "Blowfish Encrypt");
 						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addTextarea("key-text", "", "Key", false, false, "", true);
-						maker.addButton("encrypt-btn", "", "Encrypt");
-						maker.addButton("decrypt-btn", "", "Decrypt");
-						maker.addButton("", "swap-btn", "Swap");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
+						maker.addTextarea("key-text", "", "Ключ", false, false, "", true);
+						maker.addButton("encrypt-btn", "", "Зашифровать");
+						maker.addButton("decrypt-btn", "", "Расшифровать");
+						maker.addButton("", "swap-btn", "Поменять местами");
+						maker.addTextarea("after-text", "", "Результат", "12", false, "", true);
 						$("html,body").scroll();
 
 						$("#encrypt-btn").click(function(){
@@ -285,327 +218,6 @@ $(function(){
 
 				}
 				// end encrypt
-				break;
-
-			case "hash":
-				maker.addPath('./#!/'+hashes[1], "Hash");
-
-				// start hash
-				switch(hashes[2]){
-					case "", undefined:
-						$("#category-hash").scroll();
-						break;
-
-					case "crc16":
-						setTitle("CRC16 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "CRC16");
-
-						maker.addH2("work-type", "", "CRC16 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								crc16($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "crc32":
-						setTitle("CRC32 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "CRC32");
-
-						maker.addH2("work-type", "", "CRC32 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								crc32($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "adler32":
-						setTitle("Adler32 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Adler32");
-
-						maker.addH2("work-type", "", "Adler32 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								adler32.hex($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "md2":
-						setTitle("MD2 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "MD2");
-
-						maker.addH2("work-type", "", "MD2 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								md2($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "md4":
-						setTitle("MD4 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "MD4");
-
-						maker.addH2("work-type", "", "MD4 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								md4($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "md5":
-						setTitle("MD5 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "MD5");
-
-						maker.addH2("work-type", "", "MD5 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								md5.hex($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "sha1":
-						setTitle("SHA1 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "SHA1");
-
-						maker.addH2("work-type", "", "SHA1 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								sha1.hex($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "sha224":
-						setTitle("SHA224 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "SHA224");
-
-						maker.addH2("work-type", "", "SHA224 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								sha224.hex($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "sha256":
-						setTitle("SHA256 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "SHA256");
-
-						maker.addH2("work-type", "", "SHA256 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								sha256.hex($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "sha384":
-						setTitle("SHA384 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "SHA384");
-
-						maker.addH2("work-type", "", "SHA384 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								sha384.hex($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "sha512":
-						setTitle("SHA512 Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "SHA512");
-
-						maker.addH2("work-type", "", "SHA512 Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								sha512.hex($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					case "whirlpool":
-						setTitle("Whirlpool Hash");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Whirlpool");
-
-						maker.addH2("work-type", "", "Whirlpool Hash");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("hash-btn", "", "Hash");
-						maker.addTextarea("after-text", "", "Result", "3", false, "", true);
-						$("html,body").scroll();
-
-						$("#hash-btn").click(function(){
-							$("#after-text").edit(
-								Whirlpool($("#before-text").val()).toUpperCase()
-							);
-						});
-						break;
-
-					default:
-						is_not_found = true;
-						break;
-				}
-				// end hash
-				break;
-
-			case "misc":
-				maker.addPath('./#!/'+hashes[1], "Misc");
-
-				// start misc
-				switch(hashes[2]){
-					case "", undefined:
-						$("#category-misc").scroll();
-						break;
-
-					case "uppercase":
-						setTitle("Uppercase");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Uppercase");
-
-						maker.addH2("work-type", "", "Uppercase");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("convert", "", "Convert");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
-						$("html,body").scroll();
-
-						$('#convert').click(function(){
-							$("#after-text").edit(
-								$("#before-text").val().toUpperCase()
-							);
-						});
-						break;
-
-					case "lowercase":
-						setTitle("Lowercase");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Lowercase");
-
-						maker.addH2("work-type", "", "Lowercase");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("convert", "", "Convert");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
-						$("html,body").scroll();
-
-						$('#convert').click(function(){
-							$("#after-text").edit(
-								$("#before-text").val().toLowerCase()
-							);
-						});
-						break;
-
-					case "capitalize":
-						setTitle("Capitalize");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Capitalize");
-
-						maker.addH2("work-type", "", "Capitalize");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("convert", "", "Convert");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
-						$("html,body").scroll();
-
-						$('#convert').click(function(){
-							$("#after-text").edit(
-								strCapitalize($("#before-text").val())
-							);
-						});
-						break;
-
-					case "reverse":
-						setTitle("Reverse");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Reverse");
-
-						maker.addH2("work-type", "", "Reverse");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("convert", "", "Convert");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
-						$("html,body").scroll();
-
-						$('#convert').click(function(){
-							$("#after-text").edit(
-								strReverse($("#before-text").val())
-							);
-						});
-						break;
-
-					case "shuffle":
-						setTitle("Shuffle");
-						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Shuffle");
-
-						maker.addH2("work-type", "", "Shuffle");
-						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
-						maker.addButton("convert", "", "Convert");
-						maker.addTextarea("after-text", "", "Result", "12", false, "", true);
-						$("html,body").scroll();
-
-						$('#convert').click(function(){
-							$("#after-text").edit(
-								strShuffle($("#before-text").val())
-							);
-						});
-						break;
-
-					default:
-						is_not_found = true;
-						break;
-				}
-				// end misc
 				break;
 
 			default:
