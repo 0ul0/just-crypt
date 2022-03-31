@@ -365,11 +365,11 @@ $(function(){
 						' | ' +
 						'<span title="Size of text (bytes)">Size: <span id="'+id+'-size">'+value.size()+'</span></span>' +
 						' | ' +
-						'<a class="copy-btn" data-target="#'+id+'" title="Copy to clipboard">Copy</a>' +
+						'<a class="copy-btn" data-target="#'+id+'" title="Copy to clipboard">Скопировать</a>' +
 						' | ' +
-						'<a class="clear-btn" data-target="#'+id+'" title="Clear to text">Clear</a>' +
+						'<a class="clear-btn" data-target="#'+id+'" title="Clear to text">Очистить</a>' +
 						' | ' +
-						'<a class="save-btn" data-target="#'+id+'" title="Save to file">Save</a>' +
+						'<a class="save-btn" data-target="#'+id+'" title="Save to file">Сохранить</a>' +
 					'</div>'
 				);
 				$("#"+id).on("input",function(){
