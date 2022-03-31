@@ -102,7 +102,7 @@ $(function(){
 
 
 			case "encrypt":
-				maker.addPath('./#!/'+hashes[1], "Выберите алгоритм");
+				maker.addPath('./#!/'+hashes[1], "Алгоритм /");
 
 				// start encrypt
 				switch(hashes[2]){
