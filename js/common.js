@@ -102,7 +102,7 @@ $(function(){
 
 
 			case "encrypt":
-				maker.addPath('./#!/'+hashes[1], "Алгоритм /");
+				maker.addPath('./#!/'+hashes[1], "Алгоритмы");
 
 				// start encrypt
 				switch(hashes[2]){
@@ -111,7 +111,7 @@ $(function(){
 						break;
 
 					case "aes":
-						setTitle("AES Encrypt");
+						setTitle("Алгоритм AES");
 						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "AES");
 
 						maker.addH2("work-type", "", "Алгоритм AES");
@@ -138,10 +138,10 @@ $(function(){
 						break;
 
 					case "rc4":
-						setTitle("RC4 Encrypt");
+						setTitle("Алгоритм RC4");
 						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "RC4");
 
-						maker.addH2("work-type", "", "RC4 Encrypt");
+						maker.addH2("work-type", "", "Алгоритм RC4");
 						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
 						maker.addTextarea("key-text", "", "Ключ", false, false, "", true);
 						maker.addButton("encrypt-btn", "", "Зашифровать");
@@ -165,10 +165,10 @@ $(function(){
 						break;
 
 					case "des":
-						setTitle("DES Encrypt");
+						setTitle("Алгоритм DES");
 						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "DES");
 
-						maker.addH2("work-type", "", "DES Encrypt");
+						maker.addH2("work-type", "", "Алгоритм DES");
 						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
 						maker.addTextarea("key-text", "", "Ключ", false, false, "", true);
 						maker.addButton("encrypt-btn", "", "Зашифровать");
@@ -192,10 +192,10 @@ $(function(){
 						break;
 
 					case "blowfish":
-						setTitle("Blowfish Encrypt");
+						setTitle("Алгоритм Blowfish");
 						maker.addPath('./#!/'+hashes[1]+'/'+hashes[2], "Blowfish");
 
-						maker.addH2("work-type", "", "Blowfish Encrypt");
+						maker.addH2("work-type", "", "Алгоритм Blowfish");
 						maker.addTextarea("before-text", "", "Text", "12", true, "", true);
 						maker.addTextarea("key-text", "", "Ключ", false, false, "", true);
 						maker.addButton("encrypt-btn", "", "Зашифровать");
