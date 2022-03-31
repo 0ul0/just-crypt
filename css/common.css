@@ -9,7 +9,8 @@ body {
     height: 100vh;
     margin: 0;
     display: flex;
-	background: url(./bg.jpg);
+   background-image: url(../bg.jpg); /* выходим из папки css на уровень вверх, и заходим в папку img */
+
 }
 @media screen and (max-width: 1280px) { div.contentblock {width: 1200px;} } 
 div{
