@@ -68,17 +68,7 @@ $(function(){
 		delete link;
 	});
 
-	$(".scroll-top").click(function(){
-		$("html,body").animate({
-			scrollTop: 0
-		}, 500);
-	});
-	$(".scroll-bottom").click(function(){
-		var pos = $("html").height();
-		$("html,body").animate({
-			scrollTop: pos
-		}, 500);
-	});
+	
 
 	function setTitle(title){
 		$("title").html((title ? title + " | " : "") + "just-crypt");
